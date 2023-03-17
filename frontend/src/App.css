@@ -38,3 +38,11 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-bar {
+  background-image: linear-gradient(to right, #1E1F1E, #4F5252);
+}
+
+.site-footer {
+  background-image: linear-gradient(to left, #1E1F1E, #4F5252);
+}

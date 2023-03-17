@@ -1,3 +1,4 @@
+import React from 'react';
 import { useReducer, useState } from 'react';
 import Todo from '../components/todo/Todo';
 import { Container, Row, Col } from 'reactstrap';
@@ -54,22 +55,32 @@ const UseReducer = () => {
     console.log(todos)
 
     return (
-        <Container style={{ backgroundColor: 'pink' }}>
-            <Row>
-                <form onSubmit={handleSubmit}>
-                    <input type='text' value={name} onChange={e => setName(e.target.value)} />
-                </form>
-            </Row>
-            <Row>
+        <Container className='p-5 m-5' style={{ backgroundColor: 'grey', borderRadius: '10px' }}>
+            <Row className='d-flex justify-content-center mb-5'>
                 <Col>
-                    {
-                        todos.map(todo => {
-                            return (
-                                <Todo key={todo.id} todo={todo} dispatch={dispatch} />
-                            )
-                        })
-                    }
+                    <h1>Todo List</h1>
                 </Col>
+            </Row>
+            <Row className='d-flex justify-content-center row-content'>
+                <Col md='3'>
+                    <h5>Type in what you need to do:</h5>
+                </Col>
+                <Col md='2'>
+                    <form onSubmit={handleSubmit}>
+                        <input type='text' value={name} onChange={e => setName(e.target.value)} />
+                    </form>
+                </Col>
+            </Row>
+            <Row className='d-flex justify-content-center mt-5 pb-2'>
+
+                {
+                    todos.map(todo => {
+                        return (
+                            <Todo key={todo.id} todo={todo} dispatch={dispatch} />
+                        )
+                    })
+                }
+
             </Row>
 
         </Container >

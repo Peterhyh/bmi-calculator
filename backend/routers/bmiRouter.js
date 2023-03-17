@@ -16,10 +16,10 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res) => {
     Bmi.create(req.body)
-    const calculate = (req.body.weight / req.body.height);
+    const calculate = Math.round(((req.body.weight * 703) / Math.pow(req.body.height, 2)) * 100) / 100;
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.json(`BMI is: ${calculate}`);
+    res.json(`BMI: ${calculate}`);
 })
 
 

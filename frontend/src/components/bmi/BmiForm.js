@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Label, FormGroup, Col, Row } from 'reactstrap';
+import { Button, Label, FormGroup, Container, Col, Row } from 'reactstrap';
 import { Formik, Form, Field, useFormik } from 'formik';
 import axios from 'axios';
 
@@ -30,45 +30,53 @@ const BmiForm = ({ setBmi }) => {
 
 
     return (
-        <Formik>
-            <Form onSubmit={formik.handleSubmit}>
-                <FormGroup>
-                    <Row style={{ backgroundColor: 'blue' }}>
-                        <Col md='4' sm='4' style={{ backgroundColor: 'red' }}>
-                            <Label htmlFor='weight'>
-                                {'Weight (lbs)'}
-                            </Label>
-                        </Col>
-                        <Col md='4' sm='4' style={{ backgroundColor: 'pink' }}>
-                            <Field
-                                type='text'
-                                className='form-control'
-                                name='weight'
-                                placeholder='weight'
-                                onChange={formik.handleChange}
-                                value={formik.values.weight}
-                            />
-                        </Col>
-                    </Row>
-                </FormGroup>
-                <FormGroup>
-                    <Label htmlFor='height'>
-                        {'Height (inches)'}
-                    </Label>
-                    <Field
-                        type='text'
-                        className='form-control'
-                        name='height'
-                        placeholder='height'
-                        onChange={formik.handleChange}
-                        value={formik.values.height}
-                    />
-                </FormGroup>
-                <Button type='submit' color='primary'>
-                    Submit
-                </Button>
-            </Form>
-        </Formik>
+        <Container className='p-5 mb-5' style={{ backgroundColor: 'grey', width: '50%', borderRadius: '10px' }}>
+            <Formik>
+                <Form onSubmit={formik.handleSubmit}>
+                    <FormGroup>
+                        <Row className='d-flex justify-content-center'>
+                            <Col md='3'>
+                                <Label htmlFor='weight'>
+                                    {'Weight (lbs)'}
+                                </Label>
+                            </Col>
+                            <Col md='2'>
+                                <Field
+                                    type='text'
+                                    className='form-control'
+                                    name='weight'
+                                    placeholder='lbs'
+                                    onChange={formik.handleChange}
+                                    value={formik.values.weight}
+                                />
+                            </Col>
+                        </Row>
+                    </FormGroup>
+                    <FormGroup>
+                        <Row className='d-flex justify-content-center'>
+                            <Col md='3'>
+                                <Label htmlFor='height'>
+                                    {'Height (inches)'}
+                                </Label>
+                            </Col>
+                            <Col md='2'>
+                                <Field
+                                    type='text'
+                                    className='form-control'
+                                    name='height'
+                                    placeholder='inches'
+                                    onChange={formik.handleChange}
+                                    value={formik.values.height}
+                                />
+                            </Col>
+                        </Row>
+                    </FormGroup>
+                    <Button className='mt-4' type='submit' color='primary'>
+                        Calculate
+                    </Button>
+                </Form>
+            </Formik>
+        </Container>
     )
 };
 

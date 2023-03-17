@@ -1,6 +1,7 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
-import { Container, Row, Button } from 'reactstrap';
+import { Container, Row, Col, Button } from 'reactstrap';
 
 const fetchData = async () => {
     return (
@@ -14,11 +15,6 @@ const fetchData = async () => {
             })
     )
 };
-
-
-
-
-
 
 const Counter = () => {
     const [counter, setCounter] = useState(0);
@@ -44,22 +40,34 @@ const Counter = () => {
     }, [])
 
 
-
-
     return (
-        <Container style={null}>
-            <Row>
-                <button onClick={decrement}>
-                    -
-                </button>
-
-                <span>{counter}</span>
-
-                <button onClick={increment}>
-                    +
-                </button>
+        <Container>
+            <Row className='mb-5 mt-5 p-3' style={{ backgroundColor: 'grey', borderRadius: '10px' }}>
+                <h1>TESTING PAGE</h1>
             </Row>
             <Row>
+                <h2>COUNTER:</h2>
+            </Row>
+            <Row className='mb-5 p-5 d-flex justify-content-center align-items-center' style={{ backgroundColor: 'grey', borderRadius: '10px' }}>
+                <Col md='1' style={{ borderRadius: '10px' }}>
+                    <Button color='warning' onClick={decrement}>
+                        -
+                    </Button>
+                </Col>
+                <Col className='p-3' md='1' style={{ backgroundColor: '#171A19', color: '#fff', borderRadius: '10px' }}>
+                    <span >{counter}</span>
+                </Col>
+                <Col md='1' style={{ borderRadius: '10px' }}>
+                    <Button color='warning' onClick={increment}>
+                        +
+                    </Button>
+                </Col>
+            </Row>
+            <Row>
+                <h2>GET REQUEST</h2>
+                <h3>https://randomuser.me/api</h3>
+            </Row>
+            <Row className='p-5 mb-5' style={{ backgroundColor: 'grey', borderRadius: '10px' }}>
                 <pre>
                     {data}
                 </pre>

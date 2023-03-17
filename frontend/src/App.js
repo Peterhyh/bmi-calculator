@@ -1,9 +1,13 @@
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-social/assets/css/font-awesome.css';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import BmiCalculatorPage from './pages/BmiCalculatorPage';
 import Counter from './pages/Counter';
 import UseReducer from './pages/UseReducer';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,6 +18,7 @@ function App() {
         <Route path='/todo' element={<UseReducer />} />
         <Route path='/bmi' element={<BmiCalculatorPage />} />
       </Routes>
+      <Footer />
     </div>
 
   );
