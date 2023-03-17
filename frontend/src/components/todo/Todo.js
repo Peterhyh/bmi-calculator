@@ -1,5 +1,5 @@
 import React from 'react'
-import { ACTIONS } from '../pages/UseReducer.js';
+import { ACTIONS } from '../../pages/UseReducer.js';
 import { Container, Row, Col, Button } from 'reactstrap';
 
 

@@ -16,18 +16,13 @@ const fetchData = async () => {
 };
 
 
-const getInfo = (info) => {
-    const { name: { first, last }
-    } = info;
-    return (`${first} ${last}`)
-}
+
 
 
 
 const Counter = () => {
     const [counter, setCounter] = useState(0);
     const [data, setData] = useState();
-    const [userInfos, setUserInfos] = useState([]);
 
     const decrement = () => {
         setCounter(counter - 1);
@@ -42,7 +37,6 @@ const Counter = () => {
         fetchData()
             .then(response => {
                 setData(JSON.stringify(response, null, 2) || 'No data to show');
-                setUserInfos(response.results)
             })
             .catch(err => {
                 console.err(err);
@@ -64,17 +58,6 @@ const Counter = () => {
                 <button onClick={increment}>
                     +
                 </button>
-            </Row>
-            <Row>
-                {
-                    userInfos.map((info, idx) => {
-                        return (
-                            <div className='box' key={idx}>
-                                <p>{getInfo(info)}</p>
-                            </div>
-                        )
-                    })
-                }
             </Row>
             <Row>
                 <pre>

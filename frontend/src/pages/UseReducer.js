@@ -1,5 +1,5 @@
 import { useReducer, useState } from 'react';
-import Todo from '../components/Todo';
+import Todo from '../components/todo/Todo';
 import { Container, Row, Col } from 'reactstrap';
 
 
