@@ -8,13 +8,7 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h5>Social</h5>
-                        <a
-                            className='btn btn-social-icon btn-instagram'
-                            href='https://www.instagram.com/peterhyh/?hl=en'
-                        >
-                            <i className='fa fa-instagram' />
-                        </a>
+
                     </Col>
                 </Row>
             </Container>
