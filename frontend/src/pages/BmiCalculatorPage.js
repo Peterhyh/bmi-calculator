@@ -11,7 +11,7 @@ const BmiCalculatorPage = () => {
         <Container>
             <Row className='m-5 d-flex justify-content-center'>
                 <Col md='7'>
-                    <h1 className='p-3' style={{ backgroundColor: 'grey', opacity: 0.5, borderRadius: '10px' }} >{bmi}</h1>
+                    <h1 className='bmi-cal-title p-3' >{bmi}</h1>
                 </Col>
             </Row>
             <Row >

@@ -46,3 +46,63 @@
 .site-footer {
   background-image: linear-gradient(to left, #1E1F1E, #4F5252);
 }
+
+/*BmiCalculatorPage---------------------------------------------------------------------------------------*/
+
+.bmi-cal-title {
+  background-color: grey;
+  border-radius: 10px;
+}
+
+/*CounterPage---------------------------------------------------------------------------------------*/
+
+.counter-title {
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.decrement-button {
+  border-radius: 10px;
+}
+
+.counter-display {
+  background-color: #171A19;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.increment-button {
+  border-radius: 10px;
+}
+
+.counter-row {
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.json-data-row {
+  background-color: grey;
+  border-radius: 10px;
+}
+
+/*UseReducerPage---------------------------------------------------------------------------------------*/
+
+.todo-container {
+  background-color: grey;
+  border-radius: 10px;
+}
+
+/*Todo Component---------------------------------------------------------------------------------------*/
+
+.todo-description {
+  background-color: #1E1F1EC4;
+  border-radius: 10px;
+}
+
+
+/*BmiForm Component*/
+.bmi-container {
+  background-color: grey;
+  width: 50%;
+  border-radius: 10px;
+}

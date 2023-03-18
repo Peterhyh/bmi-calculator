@@ -1,5 +1,5 @@
 import React from 'react'
-import { ACTIONS } from '../../pages/UseReducer.js';
+import { ACTIONS } from '../../pages/TodoPage';
 import { Container, Row, Col, Button } from 'reactstrap';
 
 
@@ -7,7 +7,7 @@ const Todo = ({ todo, dispatch }) => {
     return (
         <Container >
             <Row className='d-flex justify-content-center'>
-                <Col className='d-flex justify-content-center align-items-center m-1' md='3' style={{ backgroundColor: '#1E1F1EC4', borderRadius: '10px' }}>
+                <Col className='todo-description d-flex justify-content-center align-items-center m-1' md='3' >
                     <span style={{ color: todo.complete ? '#1E1F1EC4' : '#fff' }}>
                         {todo.name}
                     </span>

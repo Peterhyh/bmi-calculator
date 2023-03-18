@@ -30,7 +30,7 @@ const BmiForm = ({ setBmi }) => {
 
 
     return (
-        <Container className='p-5 mb-5' style={{ backgroundColor: 'grey', width: '50%', borderRadius: '10px' }}>
+        <Container className='bmi-container p-5 mb-5' >
             <Formik>
                 <Form onSubmit={formik.handleSubmit}>
                     <FormGroup>

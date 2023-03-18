@@ -8,7 +8,7 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col>
-
+                        <p>Developed by Peter Huynh</p>
                     </Col>
                 </Row>
             </Container>

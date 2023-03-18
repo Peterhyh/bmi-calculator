@@ -4,18 +4,15 @@ import Todo from '../components/todo/Todo';
 import { Container, Row, Col } from 'reactstrap';
 
 
-
-//---------------------------------------------------------------------------------------
 export const ACTIONS = {
     ADD_TODO: 'add-todo',
     TOGGLE_TODO: 'toggle-todo', //action for completing or uncompleting the todo list
     DELETE_TODO: 'delete-todo'
 };
-//---------------------------------------------------------------------------------------
 
-const UseReducer = () => {
 
-    //---------------------------------------------------------------------------------------
+const TodoPage = () => {
+
     const reducer = (todos, action) => {
         switch (action.type) {
             case ACTIONS.ADD_TODO:
@@ -34,7 +31,7 @@ const UseReducer = () => {
 
         }
     };
-    //---------------------------------------------------------------------------------------
+
     const newTodo = (name) => {
         return {
             id: Date.now(),
@@ -42,7 +39,7 @@ const UseReducer = () => {
             complete: false
         }
     };
-    //---------------------------------------------------------------------------------------    
+
     const [todos, dispatch] = useReducer(reducer, []);
     const [name, setName] = useState('');
 
@@ -55,7 +52,7 @@ const UseReducer = () => {
     console.log(todos)
 
     return (
-        <Container className='p-5 m-5' style={{ backgroundColor: 'grey', borderRadius: '10px' }}>
+        <Container className='todo-container p-5 m-5' >
             <Row className='d-flex justify-content-center mb-5'>
                 <Col>
                     <h1>Todo List</h1>
@@ -86,6 +83,5 @@ const UseReducer = () => {
         </Container >
     )
 }
-//---------------------------------------------------------------------------------------
 
-export default UseReducer;
+export default TodoPage;

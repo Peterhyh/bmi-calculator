@@ -4,8 +4,8 @@ import 'bootstrap-social/assets/css/font-awesome.css';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import BmiCalculatorPage from './pages/BmiCalculatorPage';
-import Counter from './pages/Counter';
-import UseReducer from './pages/UseReducer';
+import CounterPage from './pages/CounterPage';
+import TodoPage from './pages/TodoPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -14,8 +14,8 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Counter />} />
-        <Route path='/todo' element={<UseReducer />} />
+        <Route path='/' element={<CounterPage />} />
+        <Route path='/todo' element={<TodoPage />} />
         <Route path='/bmi' element={<BmiCalculatorPage />} />
       </Routes>
       <Footer />
